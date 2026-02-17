@@ -6,7 +6,7 @@
 }
 
 body {
-  background: #0b0c2a; /* Dark night sky */
+  background: #0b0c2a; /* Night sky */
   height: 100vh;
   overflow: hidden;
   position: relative;
@@ -18,35 +18,46 @@ body {
   height: 100%;
 }
 
+/* Star base */
 .star {
   position: absolute;
   background: white;
-  border-radius: 50%;
+  clip-path: polygon(
+    50% 0%, 
+    61% 35%, 
+    98% 35%, 
+    68% 57%, 
+    79% 91%, 
+    50% 70%, 
+    21% 91%, 
+    32% 57%, 
+    2% 35%, 
+    39% 35%
+  ); /* 5-point star shape */
   opacity: 0;
   animation: twinkle 3s infinite;
-  /* Add soft glow for "sticker" effect */
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
 /* Sizes */
 .star.small {
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
 }
 
 .star.medium {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
 }
 
 .star.large {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
 }
 
 .star.big {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
 }
 
 /* Twinkle animation */
