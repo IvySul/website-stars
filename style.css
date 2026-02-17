@@ -30,35 +30,22 @@ body {
     32% 57%, 
     2% 35%, 
     39% 35%
-  );
+  ); /* 5-point star */
   opacity: 0;
-  animation: twinkle 3s infinite;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  animation: fadeStar 6s linear infinite; /* 6s per star fade cycle */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
 }
 
+/* Sizes */
+.star.small { width: 15px; height: 15px; }
+.star.medium { width: 25px; height: 25px; }
+.star.large { width: 35px; height: 35px; }
+.star.big { width: 50px; height: 50px; }
 
-.star.small {
-  width: 15px;
-  height: 15px;
-}
-
-.star.medium {
-  width: 25px;
-  height: 25px;
-}
-
-.star.large {
-  width: 35px;
-  height: 35px;
-}
-
-.star.big {
-  width: 50px;
-  height: 50px;
-}
-
-/* Twinkle animation */
-@keyframes twinkle {
-  0%, 100% { opacity: 0; }
-  50% { opacity: 1; }
+/* Fade in, stay, fade out */
+@keyframes fadeStar {
+  0% { opacity: 0; }
+  20% { opacity: 1; }   /* fade in */
+  80% { opacity: 1; }   /* stay visible */
+  100% { opacity: 0; }  /* fade out */
 }
