@@ -1,4 +1,3 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,10 +5,9 @@
 }
 
 body {
-  background: #0b0c2a; /* Night sky */
+  background: black;
   height: 100vh;
   overflow: hidden;
-  position: relative;
 }
 
 .star-container {
@@ -18,7 +16,6 @@ body {
   height: 100%;
 }
 
-/* Star base */
 .star {
   position: absolute;
   background: white;
@@ -33,13 +30,13 @@ body {
     32% 57%, 
     2% 35%, 
     39% 35%
-  ); /* 5-point star shape */
+  );
   opacity: 0;
   animation: twinkle 3s infinite;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
-/* Sizes */
+
 .star.small {
   width: 15px;
   height: 15px;
