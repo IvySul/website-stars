@@ -18,7 +18,7 @@ body {
 
 .star {
   position: absolute;
-  background: white;
+  background: #39ff14; 
   clip-path: polygon(
     50% 0%, 
     61% 35%, 
@@ -30,22 +30,20 @@ body {
     32% 57%, 
     2% 35%, 
     39% 35%
-  ); /* 5-point star */
+  );
   opacity: 0;
-  animation: fadeStar 6s linear infinite; /* 6s per star fade cycle */
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  animation: fadeSequence 16s linear infinite;
+  box-shadow: 0 0 15px #39ff14; /* neon glow */
 }
 
-/* Sizes */
 .star.small { width: 15px; height: 15px; }
 .star.medium { width: 25px; height: 25px; }
 .star.large { width: 35px; height: 35px; }
 .star.big { width: 50px; height: 50px; }
 
-/* Fade in, stay, fade out */
-@keyframes fadeStar {
-  0% { opacity: 0; }
-  20% { opacity: 1; }   /* fade in */
-  80% { opacity: 1; }   /* stay visible */
-  100% { opacity: 0; }  /* fade out */
+@keyframes fadeSequence {
+  0%, 10%   { opacity: 0; }   
+  20%, 30%  { opacity: 1; }   
+  40%, 50%  { opacity: 0; }   
+  100%      { opacity: 0; }  
 }
